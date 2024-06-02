@@ -19,7 +19,7 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         // Initialize the database handler
-        DBHandler dbHandler = new DBHandler(this, null, null, 1);
+        DatabaseHandler dbHandler = new DatabaseHandler(this, null, null, 1);
 
         // Get the list of users from the database
         List<User> userList = dbHandler.getUsers();

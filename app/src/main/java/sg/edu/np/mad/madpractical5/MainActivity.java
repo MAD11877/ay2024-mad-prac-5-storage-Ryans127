@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private User user;
-    private DBHandler dbHandler;
+    private DatabaseHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Initialize the database handler
-        dbHandler = new DBHandler(this, null, null, 1);
+        dbHandler = new DatabaseHandler(this, null, null, 1);
 
         // Retrieve the random integer and user object from the Intent
         int randomInt = getIntent().getIntExtra("RandomNumber", 0); // Default to 0 if no data found
